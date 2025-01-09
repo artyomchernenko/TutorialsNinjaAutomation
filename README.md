@@ -17,7 +17,15 @@ It is designed as a practical example for learning modern test automation tools 
 | **Maven:**   | 	A build automation tool that simplifies dependency management, project builds, and test execution processes.
 | **Jenkins:**   | Continuous integration and continuous delivery (CI/CD) platform for automated builds and deployments.        |
 
-
+## 📊 Reports
+  ```bash
+  mvn allure:serve
+  ```
+## 📊 Reports Examples
+<p>
+  <img src="ScreenShots/tc02_addTask1615288676297.jpg" width="40%" title="Example for screenshot on failure"  />
+  <img src="ScreenShots/tc01_addTask1614893191281.jpg" width="40%" alt="Example for screenshot on failure" />
+</p>
 
 ## 📁 Project Structure
 ```
@@ -54,3 +62,5 @@ It is designed as a practical example for learning modern test automation tools 
 └── testng.xml
 
 ```
+Thanks for visiting my GitHub profile! 😊
+Artyom Chernenko
