@@ -30,7 +30,7 @@ It is designed as a practical example for learning modern test automation tools 
 ## 📁 Project Structure
 ```
 ├── pom.xml
-├── src:test
+├── src/test
 │   ├── java
 │   │   ├── pageobjects
 │   │   │   ├── BasePage.java
