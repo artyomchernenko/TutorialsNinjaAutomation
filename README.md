@@ -28,6 +28,63 @@ It is designed as a practical example for learning modern test automation tools 
   <img src="Screenshots/allure02.jpg" width="40%" alt="Example for screenshot on failure" />
 </p>
 
+## 📖 Prerequisites
+
+To work with this project, ensure you have the following installed:
+
+1. **Java Development Kit (JDK)**  
+   - **Version:** 22 or higher  
+   - **Download:** [Java Downloads](https://www.oracle.com/java/technologies/javase-downloads.html)  
+   - **Verify installation:**
+     ```bash
+     java -version
+     ```
+
+2. **Apache Maven**  
+   - **Version:** 3.8.5 or higher  
+   - **Download:** [Maven Downloads](https://maven.apache.org/download.cgi)  
+   - **Verify installation:**
+     ```bash
+     mvn -v
+     ```
+
+3. **Selenium WebDriver**  
+   - Included as a dependency in the `pom.xml`. No manual installation is required.  
+   - **Dependency:**
+     ```xml
+     <dependency>
+         <groupId>org.seleniumhq.selenium</groupId>
+         <artifactId>selenium-java</artifactId>
+         <version>4.27.0</version>
+     </dependency>
+     ```
+
+4. **TestNG Framework**  
+   - Included as a dependency in the `pom.xml`. No manual installation is required.  
+   - **Dependency:**
+     ```xml
+     <dependency>
+         <groupId>org.testng</groupId>
+         <artifactId>testng</artifactId>
+         <version>7.3.0</version>
+         <scope>test</scope>
+     </dependency>
+     ```
+
+## Recommended Development Environment
+
+- **Eclipse IDE**  
+  - Since you have experience with Eclipse, it is recommended to use it for developing and running the project.  
+  - **Download:** [Eclipse Downloads](https://www.eclipse.org/downloads/)  
+  - Ensure that:
+    - You configure Eclipse to use **JDK 22**.  
+    - Maven integration is properly set up in Eclipse.
+
+---
+
+This ensures your environment is correctly configured to work with the project.
+
+
 ## 📁 Project Structure
 ```
 ├── pom.xml
