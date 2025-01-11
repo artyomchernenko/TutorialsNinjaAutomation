@@ -84,6 +84,13 @@ To work with this project, ensure you have the following installed:
 
 This ensures your environment is correctly configured to work with the project.
 
+## 🚀 Getting Started
+
+1. **Clone the Repository:**
+   ```bash
+   git clone https://github.com/your-username/your-repo.git
+    ```
+
 
 ## 📁 Project Structure
 ```
