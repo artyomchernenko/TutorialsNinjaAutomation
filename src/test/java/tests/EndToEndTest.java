@@ -27,7 +27,7 @@ public class EndToEndTest extends BaseTest{
 		laptopsAndNotebooksPage.chooseLaptop("HP LP3065");
 		laptopPage.seePhotosOfTheLaptop();
 		laptopPage.seeSpecification();
-		laptopPage.writeReview("Artyom Chernenko", "This is very good computer!!!");
+		laptopPage.writeReview("Artyom Chernenko", "This is a very good computer!!!");
 		laptopPage.chooseDeliveryDate("2025-04-11");
 		laptopPage.chooseQuantityOfLaptops("3");
 		laptopPage.addToCart();
