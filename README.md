@@ -88,7 +88,7 @@ This ensures your environment is correctly configured to work with the project.
 
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/your-username/your-repo.git
+  [ git clone https://github.com/your-username/your-repo.git](https://github.com/artyomchernenko/TutorialsNinjaAutomation.git)
     ```
 
 
