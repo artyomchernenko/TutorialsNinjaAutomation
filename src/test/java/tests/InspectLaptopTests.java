@@ -44,7 +44,7 @@ public class InspectLaptopTests extends BaseTest{
 	
 	@Test(description = "Write review for laptop(HP LP3065)")
 	public void tc04_writeReviewForLaptop() {
-		laptopPage.writeReview("Artyom Chernenko", "This is very good computer!");
+		laptopPage.writeReview("Artyom Chernenko", "This is a very good computer!");
 		//Validation
 		String expected = "Thank you for your review. It has been submitted to the webmaster for approval.";
 		String actual = laptopPage.sentReviewLable();
