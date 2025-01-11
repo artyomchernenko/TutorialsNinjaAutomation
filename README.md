@@ -87,7 +87,7 @@ This ensures your environment is correctly configured to work with the project.
 ## 🚀 Getting Started
 
 1. **Clone the Repository:**
-   ```bash
+   ```
  https://github.com/artyomchernenko/TutorialsNinjaAutomation.git
     ```
 
