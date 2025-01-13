@@ -1,6 +1,11 @@
 package tests;
 
 import org.testng.annotations.Test;
+
+import io.qameta.allure.Description;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
+
 import org.testng.AssertJUnit;
 import org.testng.annotations.Test;
 import org.testng.AssertJUnit;
@@ -17,7 +22,9 @@ import org.testng.annotations.Test;
 
 public class SearchTests extends BaseTest{
 
-	@Test(description = "Find 'MacBook' in the search field")
+	@Test
+	@Description("Find 'MacBook' in the search field")
+	@Severity(SeverityLevel.NORMAL)
 	public void tc01_searchForMacBook() {
 		mainPage.searchForProduct("MacBook");
 		//Validation
@@ -25,8 +32,10 @@ public class SearchTests extends BaseTest{
 		String actual = mainPage.searchMacbookLable();
 		AssertJUnit.assertEquals(actual, expected);
 	}
-	
-	@Test(description = "Find 'Iphone' in the search field")
+
+	@Test
+	@Description("Find 'Iphone' in the search field")
+	@Severity(SeverityLevel.NORMAL)
 	public void tc02_searchFoeIphone() {
 		mainPage.searchForProduct("Iphone");
 		//Validation
@@ -34,8 +43,10 @@ public class SearchTests extends BaseTest{
 		String actual = mainPage.searchIphoneLable();
 		AssertJUnit.assertEquals(actual, expected);
 	}
-	
-	@Test(description = "Find 'Sony' in search field")
+
+	@Test
+	@Description("Find 'Sony' in search field")
+	@Severity(SeverityLevel.NORMAL)
 	public void tc03_searchForSony() {
 		mainPage.searchForProduct("Sony");
 		//Validation
@@ -43,8 +54,10 @@ public class SearchTests extends BaseTest{
 		String  actual = mainPage.searchSonyLable();
 		AssertJUnit.assertEquals(actual, expected);
 	}
-	
-	@Test(description = "Search for random latters and simbols")
+
+	@Test
+	@Description("Search for random latters and simbols")
+	@Severity(SeverityLevel.NORMAL)
 	public void tc04_searchForRandomLatters() {
 		mainPage.searchForProduct("kajfgshjfghjsgf#$%^&((");
 		//Validation

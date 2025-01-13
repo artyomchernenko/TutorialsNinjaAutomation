@@ -1,6 +1,11 @@
 package tests;
 
 import org.testng.annotations.Test;
+
+import io.qameta.allure.Description;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
+
 import org.testng.AssertJUnit;
 import org.testng.annotations.Test;
 import org.testng.AssertJUnit;
@@ -17,7 +22,9 @@ import org.testng.annotations.Test;
 
 public class FooterTests extends BaseTest{
 
-	@Test(description = "Click on About Us")
+	@Test
+	@Description("Click on About Us")
+	@Severity(SeverityLevel.NORMAL)
 	public void tc01_choseAboutUs() {
 		mainPage.choseAboutUs();
 		//Validation
@@ -25,8 +32,10 @@ public class FooterTests extends BaseTest{
 		String actual = mainPage.aboutUsLable();
 		AssertJUnit.assertEquals(actual, expected);
 	}
-	
-	@Test(description = "Click on Choose Delivery Information")
+
+	@Test
+	@Description("Click on Choose Delivery Information")
+	@Severity(SeverityLevel.NORMAL)
 	public void tc02_choseDeliveryInformation() {
 		mainPage.choseDeliveryInformation();
 		//Validation
@@ -34,8 +43,10 @@ public class FooterTests extends BaseTest{
 		String actual = mainPage.chooseDeliveryInfoLable();
 		AssertJUnit.assertEquals(actual, expected);
 	}
-	
-	@Test(description = "Click on Privacy Policy")
+
+	@Test
+	@Description("Click on Privacy Policy")
+	@Severity(SeverityLevel.NORMAL)
 	public void tc03_chosePrivacyPolicy() {
 		mainPage.chosePrivacyPolicy();
 		//Validation
@@ -43,8 +54,10 @@ public class FooterTests extends BaseTest{
 		String actual = mainPage.privacyPolicyLable();
 		AssertJUnit.assertEquals(actual, expected);
 	}
-	
-	@Test(description = "Click on Term Conditions")
+
+	@Test
+	@Description("Click on Term Conditions")
+	@Severity(SeverityLevel.NORMAL)
 	public void tc04_coseTermConditions() {
 		mainPage.choseTermsConditions();
 		//Validation

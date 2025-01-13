@@ -1,6 +1,11 @@
 package tests;
 
 import org.testng.annotations.Test;
+
+import io.qameta.allure.Description;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
+
 import org.testng.AssertJUnit;
 import org.testng.annotations.Test;
 import org.testng.AssertJUnit;
@@ -17,7 +22,9 @@ import org.testng.annotations.Test;
 
 public class InspectLaptopTests extends BaseTest{
 
-	@Test(description = "Choose one laptop(HP LP3065)")
+	@Test
+	@Description("Choose one laptop(HP LP3065)")
+	@Severity(SeverityLevel.NORMAL)
 	public void tc01_chooseLaptopToInspect() {
 		mainPage.enterProductsPage("Laptops & Notebooks");
 		laptopsAndNotebooksPage.chooseLaptop("HP LP3065");
@@ -26,14 +33,18 @@ public class InspectLaptopTests extends BaseTest{
 		String actual = laptopsAndNotebooksPage.laptopModelLable();
 		AssertJUnit.assertEquals(actual, expected);
 	}
-	
-	@Test(description = "See the photos of laptop(HP LP3065)")
+
+	@Test
+	@Description("See the photos of laptop(HP LP3065)")
+	@Severity(SeverityLevel.NORMAL)
 	public void tc02_seeThePhotosofLaptop() {
 		laptopPage.seePhotosOfTheLaptop();
 		AssertJUnit.assertTrue(laptopPage.checkIfPictureIsClickable());
 	}
-	
-	@Test(description = "See specification of the laptop(HP LP3065)")
+
+	@Test
+	@Description("See specification of the laptop(HP LP3065)")
+	@Severity(SeverityLevel.NORMAL)
 	public void tc03_seeSpecificationOfLaptop() {
 		laptopPage.seeSpecification();
 		//Validation
@@ -41,8 +52,10 @@ public class InspectLaptopTests extends BaseTest{
 		String actual = laptopPage.specificationLable();
 		AssertJUnit.assertEquals(actual, expected);
 	}
-	
-	@Test(description = "Write review for laptop(HP LP3065)")
+
+	@Test
+	@Description("Write review for laptop(HP LP3065)")
+	@Severity(SeverityLevel.NORMAL)
 	public void tc04_writeReviewForLaptop() {
 		laptopPage.writeReview("Artyom Chernenko", "This is a very good computer!");
 		//Validation

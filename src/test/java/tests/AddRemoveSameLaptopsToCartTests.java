@@ -1,6 +1,11 @@
 package tests;
 
 import org.testng.annotations.Test;
+
+import io.qameta.allure.Description;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
+
 import org.testng.AssertJUnit;
 import org.testng.annotations.Test;
 import org.testng.AssertJUnit;
@@ -17,7 +22,9 @@ import org.testng.annotations.Test;
 
 public class AddRemoveSameLaptopsToCartTests extends BaseTest{
 
-	@Test(description = "Choose laptop(MacBook Air)")
+	@Test
+	@Description("Choose laptop(MacBook Air)")
+	@Severity(SeverityLevel.NORMAL)
 	public void tc01_chooseLaptop() {
 		mainPage.enterProductsPage("Laptops & Notebooks");
 		laptopsAndNotebooksPage.chooseLaptop("MacBook Air");
@@ -27,7 +34,9 @@ public class AddRemoveSameLaptopsToCartTests extends BaseTest{
 		AssertJUnit.assertEquals(actual, expected);
 	}
 
-	@Test(description = "Add one laptop(Macbook Air) to the cart")
+	@Test
+	@Description("Add one laptop(Macbook Air) to the cart")
+	@Severity(SeverityLevel.NORMAL)
 	public void tc02_addToCartLaptop() {
 		mainPage.enterProductsPage("Laptops & Notebooks");
 		laptopsAndNotebooksPage.addToCart("MacBook Air");
@@ -37,7 +46,9 @@ public class AddRemoveSameLaptopsToCartTests extends BaseTest{
 		AssertJUnit.assertEquals(actual, expected);
 	}
 
-	@Test(description = "Remove one laptop from cart")
+	@Test
+	@Description("Remove one laptop from cart")
+	@Severity(SeverityLevel.NORMAL)
 	public void tc03_removeLaptopFromCart() {
 		laptopsAndNotebooksPage.removeFromCart();
 		//Validation
@@ -46,7 +57,9 @@ public class AddRemoveSameLaptopsToCartTests extends BaseTest{
 		AssertJUnit.assertEquals(actual, expected);
 	}
 
-	@Test(description = "Add 3 same laptops(MacBook) to the cart")
+	@Test
+	@Description("Add 3 same laptops(MacBook) to the cart")
+	@Severity(SeverityLevel.NORMAL)
 	public void tc04_add3SameLaptopsToCart() {
 		mainPage.enterProductsPage("Laptops & Notebooks");
 		laptopsAndNotebooksPage.chooseLaptop("MacBook");
@@ -58,7 +71,9 @@ public class AddRemoveSameLaptopsToCartTests extends BaseTest{
 		AssertJUnit.assertEquals(actual, expected);
 	}
 
-	@Test(description = "Remove all laptops from the cart")
+	@Test
+	@Description("Remove all laptops from the cart")
+	@Severity(SeverityLevel.NORMAL)
 	public void tc05_removeAllSameFromCart() {
 		laptopsAndNotebooksPage.removeFromCart();
 		//Validation 

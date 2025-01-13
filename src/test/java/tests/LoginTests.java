@@ -1,6 +1,11 @@
 package tests;
 
 import org.testng.annotations.Test;
+
+import io.qameta.allure.Description;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
+
 import org.testng.AssertJUnit;
 import org.testng.annotations.Test;
 import org.testng.AssertJUnit;
@@ -12,7 +17,9 @@ import org.testng.annotations.Test;
 
 public class LoginTests extends BaseTest{
 
-	@Test(description = "Login with valid user name and password")
+	@Test
+	@Description("Login with valid user name and password")
+	@Severity(SeverityLevel.CRITICAL)
 	public void tc01_loginValid(){
 		mainPage.EnterLoginPage();
 		loginPage.login("aptem1986@mail.ru", "Onlyforproject");
@@ -22,7 +29,9 @@ public class LoginTests extends BaseTest{
 		AssertJUnit.assertEquals(actual, expected);
 	}
 
-	@Test(description = "Logout the system")
+	@Test
+	@Description("Logout the system")
+	@Severity(SeverityLevel.NORMAL)
 	public void tc02_logout() {
 		loginPage.logout();
 		//Validation
@@ -31,7 +40,9 @@ public class LoginTests extends BaseTest{
 		AssertJUnit.assertEquals(actual, expected);
 	}
 
-	@Test(description = "Login with invalid username and password")
+	@Test
+	@Description("Login with invalid username and password")
+	@Severity(SeverityLevel.NORMAL)
 	public void tc03_loginInvalid() {
 		mainPage.EnterLoginPage();
 		loginPage.login("ApTeM", "12345678");
@@ -41,7 +52,9 @@ public class LoginTests extends BaseTest{
 		AssertJUnit.assertEquals(actual, expected);
 	}
 
-	@Test(dataProvider = "getData", description = "Login with 4 different usernames and passwords (1 Valid and 3 invalid)")
+	@Test(dataProvider = "getData")
+	@Description("Login with 4 different usernames and passwords (1 Valid and 3 invalid)")
+	@Severity(SeverityLevel.CRITICAL)
 	public void tc04_fourDifferentlogins(String username, String password) {
 		mainPage.EnterLoginPage();
 		loginPage.login(username, password);

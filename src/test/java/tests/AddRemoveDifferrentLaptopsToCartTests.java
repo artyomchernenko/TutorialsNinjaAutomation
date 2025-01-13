@@ -1,6 +1,11 @@
 package tests;
 
 import org.testng.annotations.Test;
+
+import io.qameta.allure.Description;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
+
 import org.testng.AssertJUnit;
 import org.testng.annotations.Test;
 import org.testng.AssertJUnit;
@@ -17,7 +22,9 @@ import org.testng.annotations.Test;
 
 public class AddRemoveDifferrentLaptopsToCartTests extends BaseTest{
 
-	@Test(description = "Add 2 different laptops(Sony VAIO and MacBook Air)at the same time to the cart")
+	@Test
+	@Description("Add 2 different laptops(Sony VAIO and MacBook Air)at the same time to the cart")
+	@Severity(SeverityLevel.NORMAL)
 	public void tc01_addFewLaptops(){
 		mainPage.enterProductsPage("Laptops & Notebooks");
 		laptopsAndNotebooksPage.addDifferentLaptopsToCart("Sony VAIO");
@@ -28,7 +35,9 @@ public class AddRemoveDifferrentLaptopsToCartTests extends BaseTest{
 		AssertJUnit.assertEquals(actual, expected);
 	}
 
-	@Test(description = "Remove one chosen laptop(MacBook Air) from the cart")
+	@Test
+	@Description("Remove one chosen laptop(MacBook Air) from the cart")
+	@Severity(SeverityLevel.NORMAL)
 	public void tc02_removeChosenLaptopFromCart() {
 		laptopsAndNotebooksPage.chooseAndRemoveFromCart("MacBook Air");
 		//Validation
@@ -37,7 +46,9 @@ public class AddRemoveDifferrentLaptopsToCartTests extends BaseTest{
 		AssertJUnit.assertEquals(actual, expected);
 	}
 
-	@Test(description = "Add all laptops the cart(at the same time)")
+	@Test
+	@Description("Add all laptops the cart(at the same time)")
+	@Severity(SeverityLevel.NORMAL)
 	public void tc03_addAllDifferentLaptops() {
 		mainPage.enterProductsPage("Laptops & Notebooks");
 		laptopsAndNotebooksPage.addDifferentLaptopsToCart("HP LP3065");
@@ -51,7 +62,9 @@ public class AddRemoveDifferrentLaptopsToCartTests extends BaseTest{
 		AssertJUnit.assertEquals(actual, expected);
 	}
 
-	@Test(description = "Remove all different laptops")
+	@Test
+	@Description("Remove all different laptops")
+	@Severity(SeverityLevel.NORMAL)
 	public void tc04_removeAllDifferentLaptopsFromCart() {
 		laptopsAndNotebooksPage.removeAllDifferentLaptops();
 		//Validation 

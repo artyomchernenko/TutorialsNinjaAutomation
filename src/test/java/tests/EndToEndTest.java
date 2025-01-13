@@ -1,6 +1,11 @@
 package tests;
 
 import org.testng.annotations.Test;
+
+import io.qameta.allure.Description;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
+
 import org.testng.AssertJUnit;
 import org.testng.annotations.Test;
 import org.testng.AssertJUnit;
@@ -17,7 +22,9 @@ import org.testng.annotations.Test;
 
 public class EndToEndTest extends BaseTest{
 
-	@Test(description = "Login system, add product to the cart, fill your personal information, make an order.")
+	@Test
+	@Description("Login system, add products to the cart, fill your personal information, make an order.")
+	@Severity(SeverityLevel.CRITICAL)
 	public void tc01_endToEnd() {
 		mainPage.EnterLoginPage();
 		loginPage.login("aptem1986@mail.ru", "Onlyforproject");

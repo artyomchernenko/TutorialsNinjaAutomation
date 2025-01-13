@@ -1,6 +1,11 @@
 package tests;
 
 import org.testng.annotations.Test;
+
+import io.qameta.allure.Description;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
+
 import org.testng.AssertJUnit;
 import org.testng.annotations.Test;
 import org.testng.AssertJUnit;
@@ -17,7 +22,9 @@ import org.testng.annotations.Test;
 
 public class SortByTests extends BaseTest{
 
-	@Test(description = "Sort laptops by price")
+	@Test
+	@Description("Sort laptops by price")
+	@Severity(SeverityLevel.NORMAL)
 	public void tc01_sortByPrice() {
 		mainPage.enterProductsPage("Laptops & Notebooks");
 		laptopsAndNotebooksPage.sortLaptops("Price (Low > High)");
@@ -28,7 +35,9 @@ public class SortByTests extends BaseTest{
 		AssertJUnit.assertEquals(actual, expected);
 	}
 
-	@Test(description = "Sort laptops by name")
+	@Test
+	@Description("Sort laptops by name")
+	@Severity(SeverityLevel.NORMAL)
 	public void tc02_sortByName() {
 		laptopsAndNotebooksPage.sortLaptops("Name (A - Z)");
 		laptopsAndNotebooksPage.sortLaptops("Name (Z - A)");
@@ -38,7 +47,9 @@ public class SortByTests extends BaseTest{
 		AssertJUnit.assertEquals(actual, expected);
 	}
 
-	@Test(description = "Sort laptops by raiting")
+	@Test
+	@Description("Sort laptops by raiting")
+	@Severity(SeverityLevel.NORMAL)
 	public void tc03_sortByRaiting() {
 		laptopsAndNotebooksPage.sortLaptops("Rating (Highest)");
 		laptopsAndNotebooksPage.sortLaptops("Rating (Lowest)");
@@ -48,7 +59,9 @@ public class SortByTests extends BaseTest{
 		AssertJUnit.assertEquals(actual, expected);
 	}
 
-	@Test(description = "Sort laptops by model")
+	@Test
+	@Description("Sort laptops by model")
+	@Severity(SeverityLevel.NORMAL)
 	public void tc04_sortByModel() {
 		laptopsAndNotebooksPage.sortLaptops("Model (A - Z)");
 		laptopsAndNotebooksPage.sortLaptops("Model (Z - A)");
@@ -58,7 +71,9 @@ public class SortByTests extends BaseTest{
 		AssertJUnit.assertEquals(actual, expected);
 	}
 
-	@Test(description = "Sort laptops by default")
+	@Test
+	@Description("Sort laptops by default")
+	@Severity(SeverityLevel.NORMAL)
 	public void tc05_sortByDefault() {
 		laptopsAndNotebooksPage.sortLaptops("Default");
 		//Validation
@@ -67,7 +82,9 @@ public class SortByTests extends BaseTest{
 		AssertJUnit.assertEquals(actual, expected);
 	}
 
-	@Test(description = "Switch to list/grid")
+	@Test
+	@Description("Switch to list/grid")
+	@Severity(SeverityLevel.NORMAL)
 	public void tc06_switchToListGrid() {
 		laptopsAndNotebooksPage.switchToList();
 		sleep(600);
