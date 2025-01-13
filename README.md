@@ -3,7 +3,7 @@
 This is a testing automation demo project that tests a real site called: http://tutorialsninja.com/demo/index.php.
 It is designed as a practical example for learning modern test automation tools and techniques.
 <p>
-  <img src="Screenshots/allure1.jpg" width="70%" title="Example for screenshot on failure"  />
+  <img src="Screenshots/QAfoxebsite.jpg" width="70%" title="Example for screenshot on failure"  />
     <img src="Screenshots/allure2.jpg" width="70%" title="Example for screenshot on failure"  />
 </p>
 
