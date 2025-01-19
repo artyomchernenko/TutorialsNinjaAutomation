@@ -58,7 +58,7 @@ public class FooterTests extends BaseTest{
 	@Test
 	@Description("Click on Term Conditions")
 	@Severity(SeverityLevel.NORMAL)
-	public void tc04_coseTermConditions() {
+	public void tc04_choseTermConditions() {
 		mainPage.choseTermsConditions();
 		//Validation
 		String expected = "Terms & Conditions";

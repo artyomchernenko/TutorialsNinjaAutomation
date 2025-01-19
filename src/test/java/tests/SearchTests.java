@@ -36,7 +36,7 @@ public class SearchTests extends BaseTest{
 	@Test
 	@Description("Find 'Iphone' in the search field")
 	@Severity(SeverityLevel.NORMAL)
-	public void tc02_searchFoeIphone() {
+	public void tc02_searchForIphone() {
 		mainPage.searchForProduct("Iphone");
 		//Validation
 		String expected = "Search - Iphone";

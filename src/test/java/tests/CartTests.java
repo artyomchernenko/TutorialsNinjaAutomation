@@ -69,7 +69,7 @@ public class CartTests extends BaseTest{
 	@Test
 	@Description("Remove laptop from the Cart")
 	@Severity(SeverityLevel.NORMAL)
-	public void tc05_remptyTheCart() {
+	public void tc05_emptyTheCart() {
 		myCartPage.emptyTheCart();
 		//Validation
 		String expected = "Your shopping cart is empty!";

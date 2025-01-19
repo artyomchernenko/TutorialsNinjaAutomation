@@ -25,7 +25,7 @@ public class LoginTests extends BaseTest{
 		loginPage.login("aptem1986@mail.ru", "Onlyforproject");
 		//Validation
 		String expected = "My Account";
-		String actual = loginPage.getValidLginLable();
+		String actual = loginPage.getValidLoginLable();
 		AssertJUnit.assertEquals(actual, expected);
 	}
 
@@ -55,13 +55,13 @@ public class LoginTests extends BaseTest{
 	@Test(dataProvider = "getData")
 	@Description("Login with 4 different usernames and passwords (1 Valid and 3 invalid)")
 	@Severity(SeverityLevel.CRITICAL)
-	public void tc04_fourDifferentlogins(String username, String password) {
+	public void tc04_fourDifferentLogins(String username, String password) {
 		mainPage.EnterLoginPage();
 		loginPage.login(username, password);
 		//Validation
 		if (username.equals("aptem1986@mail.ru") && password.equals("Onlyforproject")) {
 			String expected = "My Account";
-			String actual = loginPage.getValidLginLable();
+			String actual = loginPage.getValidLoginLable();
 			AssertJUnit.assertEquals(actual, expected);
 		} else {
 			String expectedError1 = "Warning: No match for E-Mail Address and/or Password.";

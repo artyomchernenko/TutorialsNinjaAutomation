@@ -43,7 +43,7 @@ public class LoginPage extends BasePage{
 	}
 	
 	//Validation
-	public  String getValidLginLable() {
+	public  String getValidLoginLable() {
 		return getText(validLoginLable);
 	}
 	
