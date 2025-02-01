@@ -24,7 +24,7 @@ It is designed as a practical example for learning modern test automation tools 
   ```
 ## 📊 Reports Examples
 <p>
-  <img src="Screenshots/allure1.jpg" width="40%" title="Example for screenshot on failure"  />
+  <img src="" width="40%" title="Example for screenshot on failure"  />
   <img src="Screenshots/allure3.jpg" width="40%" alt="Example for screenshot on failure" />
 </p>
 
