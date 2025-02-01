@@ -42,13 +42,4 @@ public class BaseTest {
 	public void tearDown() {
 		driver.quit();
 	}
-
-	//Sleep for few mills
-	public void sleep(long mills) {
-		try {
-			Thread.sleep(mills);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-	}
-}
+   }
