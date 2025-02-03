@@ -114,7 +114,7 @@ public class LaptopsAndNotebooksPage extends BasePage{
 		List <WebElement> list = driver.findElements(By.cssSelector("td.text-left > a"));
 		for (WebElement el : list) {
 			if (el.getText().equalsIgnoreCase(name)) {
-				waiting(700);
+				wait.until(ExpectedConditions.visibilityOf(removeFromCartBtn));
 				click(removeFromCartBtn);
 				break;
 			}
