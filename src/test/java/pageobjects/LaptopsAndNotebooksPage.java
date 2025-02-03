@@ -128,6 +128,7 @@ public class LaptopsAndNotebooksPage extends BasePage{
 		while (true) {
 			List<WebElement> list = driver.findElements(By.cssSelector("td.text-left > a"));
 			if (list.isEmpty()) break;
+			waiting(1200);
 			click(removeFromCartBtn);
 			click(chooseCartBtn);
 		}
